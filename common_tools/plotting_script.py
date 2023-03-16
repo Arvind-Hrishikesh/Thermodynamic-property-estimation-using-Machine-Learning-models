@@ -1,3 +1,6 @@
+# This file contains all functions used to plot the data so that functions can be reused
+
+# NEcessary imports
 import matplotlib.pyplot as plt
 import plotly.express as px
 
@@ -10,7 +13,7 @@ def plot_2D_tsne(X_data, property_name, property_values):
                      vmin=min(colour_scale_values), vmax=max(colour_scale_values), 
                      s=35, cmap=cm)
     plt.title(f'2D TSNE plot for {property_name}')
-    plt.tick_params(left = False, labelleft = False, bottom = False, labelbottom = False)
+    plt.tick_params(left = False, labelleft = False, bottom = False, labelbottom = False) # Remove axis labels
     plt.colorbar(pc_scatter_2D)
     return plt.show()
 
